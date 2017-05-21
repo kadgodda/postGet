@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>GET n' POST</title>
+    <link rel="stylesheet" type="text/css" href="form.css" />
+</head>
+<body>
+    <form id="myForm" action="http://flip3.engr.oregonstate.edu:4749" >
+        <fieldset>
+            <legend>Enter Your Data:</legend>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" width="30" />
+            <br />
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" width="30" />
+            <br />
+            <label for="userName">Email:</label>
+            <input type="email" name="email" width="30" />
+            <br />
+            <label for="userName">Username:</label>
+            <input type="text" name="userName" width="30"/>
+            <br />
+            <label for="password">Password:</label>
+            <input type="password" name="password" width="30" />
+            <br />
+            <label for="post">Check for POST:</label>
+            <input id="postBox" type="checkbox" name="post" />
+            <button id="submitBtn" type="button">Submit</button>
+        </fieldset>
+    </form>
+
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function (event) {
+        if(document.getElementById("postBox").checked == true)
+        {    
+             myForm.method = "post";
+             myForm.submit();
+        }
+        else
+        {
+            myForm.submit();
+        }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿body
+{
+    background-color: antiquewhite;
+}
+
+form
+{
+    border: solid 2px grey;
+    
+}
+
+fieldset
+{
+    text-align: right;
+}
